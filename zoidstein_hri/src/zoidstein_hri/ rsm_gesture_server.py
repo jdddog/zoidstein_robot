@@ -39,7 +39,7 @@ class RSMGestureActionServer(GestureActionServer):
             
             #TODO: make call to self.rsm_serial_node to start the gesture
 
-            timer = Timer(goal_duration, self.gesture_finished, goal_handle)
+            timer = Timer(duration, self.gesture_finished, goal_handle)
             gesture_handle = GestureHandle(goal_handle, timer)
             self.add_gesture_handle(gesture_handle)
             timer.start()
